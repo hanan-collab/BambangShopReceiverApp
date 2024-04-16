@@ -85,5 +85,10 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+1. `RwLock<>` digunakan untuk menyinkronkan akses ke `Vec` dari Notifications karena memungkinkan banyak reader sekaligus atau satu writer pada suatu waktu. Ini cocok untuk skenario di mana read lebih sering daripada write.
+`Mutex<>` juga bisa digunakan, tetapi hanya mengizinkan satu thread untuk mengakses data pada satu waktu. `RwLock<>` lebih efisien karena memungkinkan banyak reader secara bersamaan.
+
+2. Rust tidak mengizinkan mutasi pada variabel statis karena keamanan memori. Ini menghindari kemungkinan `race condition` pada waktu runtime.
+`Crate lazy_static` digunakan untuk membuat variabel statis yang diinisialisasi pertama kali ketika dibutuhkan. Namun, setelah diinisialisasi, variabel tersebut tidak dapat diubah lagi, sesuai dengan prinsip keamanan Rust.
 
 #### Reflection Subscriber-2

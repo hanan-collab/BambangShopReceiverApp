@@ -92,3 +92,8 @@ This is the place for you to write reflections:
 `Crate lazy_static` digunakan untuk membuat variabel statis yang diinisialisasi pertama kali ketika dibutuhkan. Namun, setelah diinisialisasi, variabel tersebut tidak dapat diubah lagi, sesuai dengan prinsip keamanan Rust.
 
 #### Reflection Subscriber-2
+1. Saya telah melihat ke dalam src/lib.rs, yang berperan sebagai modul utama dalam proyek Rust. File ini memberikan kerangka kerja yang penting untuk aplikasi, termasuk penanganan error, definisi root URL, dan pembuatan singleton untuk konfigurasi aplikasi. Pemahaman tentang file ini membantu saya memahami bagaimana aplikasi diinisialisasi dan dikonfigurasi, serta bagaimana berbagai modul saling berinteraksi dalam proyek.
+
+2. Penggunaan pola Observer dalam proyek mempermudah penambahan subscriber tanpa perlu mengubah kelas subjek. Setiap subscriber dapat mendaftar secara independen untuk menerima pemberitahuan. Namun, menambah lebih dari satu instance dari aplikasi utama mungkin memerlukan pertimbangan tambahan dan penanganan yang lebih kompleks. Meskipun demikian, pola Observer memberikan fleksibilitas dalam menangani langganan notifikasi dalam aplikasi.
+
+3. Saya telah mencoba membuat beberapa tes sendiri dan meningkatkan dokumentasi pada koleksi Postman saya. Melalui pengujian dan dokumentasi ini, saya dapat memverifikasi kebenaran program dan memastikan bahwa respons yang dihasilkan sesuai dengan harapan. Koleksi Postman membantu saya memastikan bahwa aplikasi berjalan dengan baik dengan menggunakan real data dari aplikasi itu sendiri, dan ini membuktikan sebagai alat yang sangat berguna dalam pengembangan dan pengujian aplikasi.

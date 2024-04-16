@@ -1,1 +1,2 @@
-pub mud subscriber;
+pub mod notification;
+pub mod subscriber;
